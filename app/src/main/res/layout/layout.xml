@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:drawable/status_bar_item_app_background"
+    android:backgroundTint="#E884C0"
+    android:drawingCacheQuality="auto">
+
+    <TextView
+        android:id="@+id/NotetextView"
+        android:layout_width="390dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:maxEms="15"
+        android:maxLines="2"
+        android:text="TextView"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/DatetextView"
+        android:layout_width="130dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="5dp"
+        android:background="#00F2DEEA"
+        android:gravity="center"
+        android:text="TextView"
+        android:textColor="#DDA0DD"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NotetextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

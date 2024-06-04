@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:scrollbarSize="30px"
+    android:textAlignment="center"
+    tools:layout_editor_absoluteX="-39dp"
+    tools:layout_editor_absoluteY="5dp">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="408dp"
+        android:layout_height="70dp"
+        android:background="#F2DEEA"
+
+        android:fontFamily="@font/amarante"
+        android:gravity="center"
+        android:text="Notepad"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="200px"
+        android:background="#F1CEE3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/ToMeButton"
+        android:layout_width="103dp"
+        android:layout_height="75dp"
+        android:backgroundTint="#F1DDE9"
+        android:text="Me"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/usernametext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+
+        android:fontFamily="@font/amarante"
+        android:text="TextView"
+        android:textColor="#050505"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--    <androidx.recyclerview.widget.RecyclerView-->
+    <!--        android:id="@+id/recyclerView"-->
+    <!--        android:layout_width="409dp"-->
+    <!--        android:layout_height="429dp"-->
+    <!--        android:layout_marginTop="72dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.0"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/textView4">-->
+
+    <!--    </androidx.recyclerview.widget.RecyclerView>-->
+
+    <FrameLayout
+        android:id="@+id/FrameLayout"
+        android:name="com.example.mynotepad.RecyclerFragment"
+        android:layout_width="423dp"
+        android:layout_height="588dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usernametext">
+
+    </FrameLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="172dp"
+        android:layout_marginBottom="44dp"
+        android:adjustViewBounds="false"
+        android:background="#000000"
+        android:baselineAlignBottom="false"
+        android:foregroundTint="@color/black"
+        android:scaleX="1.3"
+        android:scaleY="1.3"
+        android:tint="@color/black"
+        app:backgroundTint="#DDA0DD"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/ic_input_add"
+        app:useCompatPadding="false" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
