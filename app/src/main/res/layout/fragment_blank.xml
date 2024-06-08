@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".BlankFragment">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="336dp"
+        android:layout_height="449dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:background="@android:drawable/progress_horizontal"
+        android:backgroundTint="#A3E88CC3"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/mytext"
+        android:layout_width="304dp"
+        android:layout_height="317dp"
+
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/amarante"
+        android:text="TextView"
+        android:textColor="#FDECEC"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usernametext" />
+
+    <TextView
+        android:id="@+id/usernametext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/amarante"
+        android:text="TextView"
+        android:textColor="#FDECEC"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/datetext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="344dp"
+        android:fontFamily="@font/amarante"
+        android:text="TextView"
+        android:textColor="#FDECEC"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usernametext" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="270dp"
+        android:layout_height="145dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/kana2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

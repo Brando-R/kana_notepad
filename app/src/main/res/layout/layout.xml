@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:background="@android:drawable/status_bar_item_app_background"
-    android:backgroundTint="#E884C0"
+    android:layout_height="126dp"
+    android:background="@android:drawable/progress_horizontal"
+    android:backgroundTint="#A3E884C0"
     android:drawingCacheQuality="auto">
 
     <TextView
@@ -18,7 +18,7 @@
         android:maxEms="15"
         android:maxLines="2"
         android:text="TextView"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -31,9 +31,18 @@
         android:background="#00F2DEEA"
         android:gravity="center"
         android:text="TextView"
-        android:textColor="#DDA0DD"
+        android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/NotetextView" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="401dp"
+        android:layout_height="17dp"
+        android:background="@color/white"
+        android:backgroundTint="#FFFDFD"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

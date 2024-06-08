@@ -42,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
         //使程序保持日间模式
         getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         loginButton = findViewById(R.id.login_button);
-
         button=findViewById(R.id.button2);
         Username=findViewById(R.id.username);
         Userpass=findViewById(id.Password);
@@ -51,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
 
         rememberPass=findViewById(id.remember_password);
         rememberPass.setChecked(true);
+        Toast.makeText(this, "Welcome to Kana Notepad", Toast.LENGTH_SHORT).show();
+
         //使用SharedPreferences获取账号和密码
         SharedPreferences sq=getSharedPreferences("usertable_sql",MODE_PRIVATE);
         //自动显示上一次记住的账号，或者是最近一次注册的账号
@@ -69,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
                 String name=Username.getText().toString();
                 String pass=Userpass.getText().toString();
                 boolean flagremeber=rememberPass.isChecked();
+
                 //登录功能
                 String sql="SELECT * FROM usertable where name=? and pass=?";
                 Cursor cursor=db.rawQuery(sql,new String[]{name,pass});
@@ -81,8 +83,10 @@ public class MainActivity extends AppCompatActivity {
                         editor.putString("pass",pass);
                         editor.apply();
                     }
+
                     //跳转
                     String username=Username.getText().toString();
+                    //每次跳转都跳出Toast
                     Toast.makeText(MainActivity.this, "登录成功！你好，亲爱的"+username, Toast.LENGTH_SHORT).show();
                     Intent MainToHome=new Intent(MainActivity.this, homeActivity.class);
                     MainToHome.putExtra("username", username);  //带上用户名一起跳转

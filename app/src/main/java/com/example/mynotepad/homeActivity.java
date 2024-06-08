@@ -28,7 +28,6 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.ArrayList;
 import java.util.List;
 
-import kotlin.sequences.FlatteningSequence;
 
 public class homeActivity extends FragmentActivity {
     private static final String DB_NAME = "database"; // 数据库名称
@@ -36,33 +35,57 @@ public class homeActivity extends FragmentActivity {
 
     //private List<notepad> notepadList=new ArrayList<>();
     private FloatingActionButton AddButton;
-    private Button ToMeButton;
+    private Button ToMeButton,homeButton,noteButton;
 
     @SuppressLint("MissingInflatedId")
     private Button CountdownButton,NotepadButton;
     @SuppressLint("MissingInflatedId")
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_home);
 
-        TextView usernametext=findViewById(id.usernametext);
         ToMeButton=findViewById(id.ToMeButton);
+        //接收跳转数据，main传来username和pass
         Intent intent = getIntent();
-        String username = intent.getStringExtra("username");    //接收main传来的username
+        String username = intent.getStringExtra("username");
         String pass=intent.getStringExtra("pass");
-        usernametext.setText("Hello！"+username);
 
-        // 创建一个RecyclerFragment实例，传入用户名、密码和MyData对象
-        RecyclerFragment recyclerFragment = new RecyclerFragment(username, pass, new MyData(this, DB_NAME, null, DB_VERSION));
-        // 获取FragmentManager实例
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        // 开始一个FragmentTransaction事务
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        // 将RecyclerFragment替换到FrameLayout中
-        fragmentTransaction.replace(id.FrameLayout, recyclerFragment);
-        // 提交事务
+        BlankFragment blankFragment=new BlankFragment(username);
+        FragmentManager fragmentManager=getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.FrameLayout,blankFragment);
         fragmentTransaction.commit();
+
+
+
+        homeButton=findViewById(id.homeButton);
+        homeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BlankFragment blankFragment=new BlankFragment(username);
+                FragmentManager fragmentManager=getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.FrameLayout,blankFragment);
+                fragmentTransaction.commit();
+            }
+        });
+        MyData myData=new MyData(this, DB_NAME, null, DB_VERSION);
+        noteButton=findViewById(id.noteButton);
+        noteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 创建一个RecyclerFragment实例，传入用户名、密码和MyData对象
+                RecyclerFragment recyclerFragment = new RecyclerFragment(username, pass, myData);
+                // 获取FragmentManager实例
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                // 开始一个FragmentTransaction事务
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                // 将RecyclerFragment替换到FrameLayout中
+                fragmentTransaction.replace(id.FrameLayout, recyclerFragment);
+                // 提交事务
+                fragmentTransaction.commit();
+            }
+        });
 
         AddButton=findViewById(id.floatingActionButton);
         AddButton.setOnClickListener(new View.OnClickListener() {
