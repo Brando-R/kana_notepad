@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
         rememberPass=findViewById(id.remember_password);
         rememberPass.setChecked(true);
-        Toast.makeText(this, "Welcome to Kana Notepad", Toast.LENGTH_SHORT).show();
+
 
         //使用SharedPreferences获取账号和密码
         SharedPreferences sq=getSharedPreferences("usertable_sql",MODE_PRIVATE);
