@@ -14,12 +14,12 @@
         android:id="@+id/textView4"
         android:layout_width="408dp"
         android:layout_height="70dp"
-        android:background="#F2DEEA"
+        android:background="#FDDBF3"
 
         android:fontFamily="@font/amarante"
         android:gravity="center"
         android:text="Notepad"
-        android:textColor="#000000"
+        android:textColor="#44405B"
         android:textSize="40sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -28,7 +28,7 @@
         android:id="@+id/view"
         android:layout_width="wrap_content"
         android:layout_height="200px"
-        android:background="#F1CEE3"
+        android:background="#FDDBF3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -36,9 +36,9 @@
         android:id="@+id/ToMeButton"
         android:layout_width="103dp"
         android:layout_height="75dp"
-        android:backgroundTint="#F1DDE9"
+        android:backgroundTint="#A3E88CC3"
         android:text="Me"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/view" />
@@ -81,7 +81,7 @@
         android:scaleX="1.3"
         android:scaleY="1.3"
         android:tint="@color/black"
-        app:backgroundTint="#DDA0DD"
+        app:backgroundTint="#F6B7D9"
         app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@android:drawable/ic_input_add"
@@ -91,12 +91,12 @@
         android:id="@+id/homeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="93dp"
+        android:layout_marginStart="100dp"
         android:layout_marginTop="8dp"
         android:backgroundTint="#A3E88CC3"
         android:text="Home"
-        android:textColor="#FAF6F6"
-        android:textColorLink="#A3E884C0"
+        android:textColor="#FFFFFF"
+        android:textColorLink="#D5E884C0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
@@ -108,8 +108,8 @@
         android:layout_marginTop="8dp"
         android:backgroundTint="#A3E88CC3"
         android:text="Note"
-        android:textColor="#F4EEEE"
-        android:textColorLink="#A3E884C0"
+        android:textColor="#FFFFFF"
+        android:textColorLink="#D5E884C0"
         app:layout_constraintStart_toEndOf="@+id/homeButton"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
