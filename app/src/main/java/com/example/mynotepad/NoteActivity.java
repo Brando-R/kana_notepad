@@ -57,7 +57,6 @@ public class NoteActivity extends AppCompatActivity {
             }
         });
         alterButton.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
                 String newnote=noteText.getText().toString();

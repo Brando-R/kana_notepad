@@ -43,10 +43,14 @@ public class AddActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_add);
+        //使程序保持日间模式，避免系统影响APP外观
+        getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+
         returnButton=findViewById(R.id.returnButton);
         saveButton=findViewById(R.id.saveButton);
 
         noteTaxt=findViewById(R.id.noteText);
+
         //spinner设置
         Dataspinner=findViewById(R.id.Dataspinner);
         /*  建立一个数据库
@@ -56,12 +60,11 @@ public class AddActivity extends AppCompatActivity {
         myData = new MyData(this, DB_NAME, null, DB_VERSION);
         db=myData.getWritableDatabase();    //获取数据库实例
 
-        //使程序保持日间模式，避免系统影响APP外观
-        getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         //接收传过来的用户名，用于后续数据存储
         Intent intent = getIntent();
         String username = intent.getStringExtra("username");
         String pass=intent.getStringExtra("pass");
+
         // 创建日期范围列表
         List<String> dateRange = new ArrayList<>();
         // 获取当前时间

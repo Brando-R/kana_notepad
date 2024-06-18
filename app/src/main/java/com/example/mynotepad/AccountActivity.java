@@ -42,6 +42,7 @@ public class AccountActivity extends AppCompatActivity {
         returnMe=findViewById(R.id.AccoutreturnButton);
         alterAccout=findViewById(R.id.alterAccout);
         newusernameText=findViewById(R.id.newAccountName);
+
         myData=new MyData(this,DB_NAME,null,DB_VERSION);
         db=myData.getWritableDatabase();    //获取数据库实例
 
@@ -66,12 +67,15 @@ public class AccountActivity extends AppCompatActivity {
                     if (newname.equals("")||newpass.equals("")){
                         Toast.makeText(AccountActivity.this, "新用户名或密码为空！", Toast.LENGTH_SHORT).show();
                     }else {
+                        //存储键值对
                         ContentValues values=new ContentValues();
+                        //修改用户数据表
                         values.put("name",newname);
                         values.put("pass",newpass);
                         db.update("usertable",values,"name=? and pass=?",new String[]{username,pass});
 
                         ContentValues values1=new ContentValues();
+                        //修改日记数据表
                         values1.put("name",newname);
                         db.update("notetable",values1,"name=?",new String[]{username});
                         Toast.makeText(AccountActivity.this, "修改成功", Toast.LENGTH_SHORT).show();

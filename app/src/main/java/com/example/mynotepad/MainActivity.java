@@ -49,8 +49,7 @@ public class MainActivity extends AppCompatActivity {
         regiterText.setPaintFlags(regiterText.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
 
         rememberPass=findViewById(id.remember_password);
-        rememberPass.setChecked(true);
-
+        rememberPass.setChecked(true);  //默认记住密码
 
         //使用SharedPreferences获取账号和密码
         SharedPreferences sq=getSharedPreferences("usertable_sql",MODE_PRIVATE);
@@ -60,7 +59,6 @@ public class MainActivity extends AppCompatActivity {
 
         myData=new MyData(this,DB_NAME,null,DB_VERSION);
         db=myData.getWritableDatabase();    //获取数据库实例
-
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override

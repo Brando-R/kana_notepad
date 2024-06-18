@@ -225,7 +225,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="20dp"
                 android:layout_toRightOf="@id/iv_setting"
-                android:text="放回主页"
+                android:text="返回主页"
                 android:textColor="#353535"
                 android:textSize="16sp" />
 

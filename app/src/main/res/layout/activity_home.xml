@@ -88,29 +88,29 @@
         app:useCompatPadding="false" />
 
     <Button
-        android:id="@+id/homeButton"
+        android:id="@+id/searchButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
+        android:layout_marginStart="12dp"
         android:layout_marginTop="8dp"
         android:backgroundTint="#A3E88CC3"
-        android:text="Home"
+        android:text="Search"
         android:textColor="#FFFFFF"
         android:textColorLink="#D5E884C0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/noteButton"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <Button
         android:id="@+id/noteButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="100dp"
         android:layout_marginTop="8dp"
         android:backgroundTint="#A3E88CC3"
         android:text="Note"
         android:textColor="#FFFFFF"
         android:textColorLink="#D5E884C0"
-        app:layout_constraintStart_toEndOf="@+id/homeButton"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
 
